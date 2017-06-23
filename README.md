@@ -14,6 +14,6 @@ The theoretical premises of the modelling technique implemented here, as well as
 3. 	P. V. Tarakanov, A. Romanov, G. V. Shashurin, "Numerical Life Estimation of Structure Components Subjected to Hydrogen Embrittlement and Cycling", Key Engineering Materials, Vols. 592-593, pp. 117-120, 2014. DOI:10.4028/www.scientific.net/KEM.592-593.117
 
 ## Results
-In depth analysis of the model and its application are discussed in mentioned papers (above). Some of the results can be found visually pleasing so I just place some plots here.
+In depth analysis of the model and its application are discussed in the mentioned papers (above). Some of the results can be found visually pleasing so I just place some plots here.
 
 ![GitHub Logo](/image1.png)
