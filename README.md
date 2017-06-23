@@ -1,7 +1,7 @@
 # Crack Growth Model
 
 ## About
-This project is dedicated to crack growth simulation. Developed in the main course of work on bachelor thesis (defended in Jun,2015). 
+This project is dedicated to crack growth simulation. Developed in the main course of work on bachelor thesis (defended in Jun,2015). In the thesis itself a **Microsoft Azure** cloud application is developed which leverages massive parallel compute resources for batch processing of the crack simulations. The thesis app is to be found here. 
 ## Rationale
 The **model** simulates crack development in a material under **cyclic load in hydrogen aggressive media**. Hydrogen embrittlement is known to cause failure combined with static loads and when considered to work together with cyclic load it shortens component’s cycling durability significantly, that is estimation of its life found with fatigue cracking models is usually bigger than the more accurate one. This model helps to predict durability of a given sample with a relatively high accuracy taking into account (mode 1) only hydrogen embrittlement or (mode 2) both named factors.
 
