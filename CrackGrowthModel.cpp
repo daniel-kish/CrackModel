@@ -116,7 +116,6 @@ double CrackGrowthModel::timeToRupture_embrittlement()
 	Beta /= integrate(phi, 0.0, a);
 
 	double dzeta = (D*V_H) / (3.0*R*T);
-	std::cout << "dzeta = "<< dzeta << '\n';
 
 	double num = integrate(sq(phi), a, b);
 	double denom = D * integrate(diff_2(phi)*phi, a, b);
@@ -182,7 +181,7 @@ double CrackGrowthModel::coef()
 	double integ = integrate(integrand, a, b, 10000u) / (2.0*sqrt(Pi));
 	double K_IVal = K_I();
 
-	num -= dzeta * 1.0e6 /* ??? */  * K_IVal * integ;
+	num -= dzeta * 1.0e6 * K_IVal * integ;
 
 	return num / denom;
 }

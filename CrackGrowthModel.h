@@ -14,9 +14,9 @@ public:
 	double lenMaxPermissible();
 	double time() const { return t; }
 
-	double l = 0.005;	// текущая длина трещины
+	double l = 0.005;	// current crack length
 
-	double l0 = 0.005;	// начальная длина трещины
+	double l0 = 0.005;	// initial crack length
 	double t = 0.0;
 	bool isEmbrittlement = false;
 
@@ -38,18 +38,18 @@ public:
 	double R = 8.314;
 	double T = 293.0;
 
-	Sup::Exp phi;		// текущая координатная функция (м-д Галеркина)
+	Sup::Exp phi;		// current basis function (for Galerkin method)
 
 	double delta = 0.0002;
 	double a0 = 1.0E-5;
 	
 	double B = 10.0;
-	double K_max = 80.0;
+	double K_max = 100.0;
 	double K_min = 10.0;
 	double alpha_1 = 2.0, beta_1 = 2.0;
-	double sigma_out = 140.0;
+	double sigma_out = 120.0;
 	double alpha_2 = 2.0, beta_2 = 2.0;
-	double Y = 1.0; // К-тарировка
+	double Y = 1.0; // К-calibration
 
 	double k_a = 0.0025, k_b = 0.000001;
 

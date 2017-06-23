@@ -1,0 +1,6 @@
+﻿  support.cpp
+  main.cpp
+  CrackGrowthModel.cpp
+  Создание кода...
+c:\users\daniel\documents\visual studio 2015\projects\crackmodel\crackmodel\main.cpp(54): warning C4715: get_l0_cr: значение возвращается не при всех путях выполнения
+  CrackModel.vcxproj -> C:\Users\Daniel\documents\visual studio 2015\Projects\CrackModel\Debug\CrackModel.exe
