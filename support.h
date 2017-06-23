@@ -15,7 +15,7 @@ namespace Sup
 
 	const double Pi = 3.14159265358979323846;
 
-	// численное интегрирование данного функтора методом трапеций
+	// numerical integration using Simpson's rule
 	template <class Fun>
 	double integrate(Fun f, double start, double end, unsigned int nr_steps = 10000u)
 	{
@@ -33,7 +33,7 @@ namespace Sup
 		return I;
 	}
 
-	struct Exp			// параметризованная экспоненциальная функция
+	struct Exp			// parameterised exponent
 	{
 		double A, k;
 
@@ -41,28 +41,28 @@ namespace Sup
 		Exp operator * (Exp rhs);
 	};
 
-	Exp sq(Exp e);		// возведение экспоненты в квадрат
-	Exp diff(Exp e);	// первая производная
-	Exp diff_2(Exp e);	// вторая производная
-	double integrate(Exp e, double start, double end);	// точная формула для интеграла экспоненциальной функции
+	Exp sq(Exp e);		// exponent squared
+	Exp diff(Exp e);	// first order derivative
+	Exp diff_2(Exp e);	// second order derivative
+	double integrate(Exp e, double start, double end);	// exponent integral exact formula
 
-	struct Pow			// параметризованная степенная функция
+	struct Pow			// parameterised pow() function
 	{
 		double power;
 
 		double operator()(double x) const;
 	};
 
-	double integrate(Pow p, double start, double end);	// точная формула для интеграла степенной функции
+	double integrate(Pow p, double start, double end);	// pow() integral exact formula
 
-	struct Line		// линейная функция
+	struct Line		// linear function
 	{
 		double b, k;
 
 		double operator()(double x) const;
 	};
 	
-	struct DataPoint	// точка графика некоторой функции
+	struct DataPoint	// plot point {x,y}
 	{
 		double x, y;
 
@@ -72,7 +72,7 @@ namespace Sup
 		{ }
 	};
 
-	using DataPoints = std::vector<DataPoint>;	// набор точек графика некоторой функции
+	using DataPoints = std::vector<DataPoint>;	// plot points
 
 	//std::ostream& operator << (std::ostream& str_out, Sup::DataPoints dp)
 	//{
@@ -80,19 +80,19 @@ namespace Sup
 	//		str_out << p.x << ' ' << p.y << '\n';
 	//}
 
-	std::tuple<double, double> mean_XY(const DataPoints&);				// среднее абсцисс и ординат набора точек
-	double cov_XY(const DataPoints&, double mean_x, double mean_y);		// коэффициент ковариации двух выборок
-	double var_X(const DataPoints&, double mean_x);						// коэффициент вариации выборки X 
-	Line RegressionLine(const DataPoints&);								// линия регрессии для выборки
+	std::tuple<double, double> mean_XY(const DataPoints&);				// X and Y mean values
+	double cov_XY(const DataPoints&, double mean_x, double mean_y);		// two samples' covariance
+	double var_X(const DataPoints&, double mean_x);						// variance 
+	Line RegressionLine(const DataPoints&);								// linear regression
 
-	DataPoints logY(DataPoints dp);										// логарифимирование выборки Y
-	Exp fitExp(DataPoints);												// подбор A*exp(k*x) для данной выборки по МНК
+	DataPoints logY(DataPoints dp);										// log of a vector
+	Exp fitExp(DataPoints);												// least squares exponent fitting
 
 
-	struct Spline			// функция "сшивки"
+	struct Spline			// "stitching" function
 	{
-		double a, b;		// область определения
-		double k_a, k_b;	// спец настроечные коэффициенты
+		double a, b;		// domain
+		double k_a, k_b;	// special params
 
 		Spline(double a, double b, double k_a, double k_b);
 		Line l;
