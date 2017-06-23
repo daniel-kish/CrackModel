@@ -2,7 +2,7 @@
 
 ## About
 This project is dedicated to crack growth simulation. Developed in the main course of work on bachelor's thesis (defended in June,2015). In the thesis itself a **Microsoft Azure** cloud application is developed which leverages massive parallel compute resources for batch processing of the crack growth simulations. The thesis app is to be found here. 
-## Rationale
+## Work relevance
 The **model** simulates crack development in a material under **cyclic load in hydrogen aggressive media**. Hydrogen embrittlement (HydEmb) is known to cause failure of a metal sample under static loads. Furthermore, when HydEmb is considered to work *together* with cyclic load it significantly shortens component’s durability, that is estimation of its life found with fatigue cracking models is usually bigger than the more accurate one. This model helps to predict durability of a given sample with a relatively high accuracy taking into account (mode 1) only hydrogen embrittlement with statis load or (mode 2) both cyclic load and HydEmb.
 
 The theoretical premises of the modelling technique implemented here, as well as thorough treatment of the subject can be found in the following papers:
